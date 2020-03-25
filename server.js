@@ -2,6 +2,7 @@ const path = require('path');
 const http= require ('http');
 const express = require('express');
 const socketio = require('socket.io');
+const cors = require('cors')
 const formatMessage = require('./utils/messages.js');
 const {userJoin, getCurrentUser, userLeave, getRoomUsers } = require('./utils/users.js');
 
