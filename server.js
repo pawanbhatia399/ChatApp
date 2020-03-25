@@ -2,7 +2,7 @@ const path = require('path');
 const http= require ('http');
 const express = require('express');
 const socketio = require('socket.io');
-const cors = require('cors')
+const cors = require('cors');
 const formatMessage = require('./utils/messages.js');
 const {userJoin, getCurrentUser, userLeave, getRoomUsers } = require('./utils/users.js');
 
@@ -13,6 +13,7 @@ const io = socketio(server);
 // Set Static Folder
 
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(cors());
 
 const botName = 'Personal Bot';
 
